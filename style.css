@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background-color: #FAFAFA;
+    text-align: center;
+    font-family: Lucida grande;
+    
+}
+
+h2 {
+    padding: 10px;
+}
+
+#navbar a {
+    transition: all 0.2s;
+    
+}
+
+#navbar a:hover {
+    transition: all 0.2s;
+    transform: scale(1.15);
+    color: #3E0402;
+    
+}
+.container-fluid {
+    padding: 20px;
+}
+
+#jumbotron { /*Main parallax header */
+
+background-image: url("images/jumbotron.jpg");
+min-height: 1080px;
+width:  100%;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow:  0 0 12px 0 #B8B8B8;
+}
+
+@media only screen /* Custom media queries to disable the parallax on mobile devices */
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { 
+
+.container {
+    padding: 0;
+}
+
+#jumbotron {
+    min-height: 200px;
+}
+
+#services ul {
+    text-align: left;
+    list-style: decimal
+}
+       
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+
+#jumbotron {
+    min-height: 170px;
+    overflow: hidden;
+}
+    
+}
+
+#jumboText h1 {
+    padding-top: 10%;
+    color: #3E0402;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 3.5px;
+     
+}
+
+
+#aboutSection img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding: 10px; 
+}
+
+#info {
+    padding-top: 20px;
+}
+
+#info img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#info h2 {
+    padding-top: 10px;
+}
+
+#services ul {
+    list-style: none;
+}
+
+
+#map {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#reviews {
+    padding-bottom: 20px;
+    
+}
+
+#reviews img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 0.7px silver solid;
+}
+
+#reviewSections p {
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #555555;
+    min-height: auto;
+    padding-top: 10px;
+    color: aliceblue;
+    box-shadow:  0 0 12px 0 #B8B8B8;
+}
