@@ -5,55 +5,91 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <title>RD Mathias</title>
+    
+    
+  <!-- JQUERY CDN -->  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+   <!-- Link css sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">   
   </head>
   <body>
-        
-        <div class="container-fluid">
-        <nav id="navbar" class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded">
-         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">Under Construction</a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#aboutSection">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#info">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#info">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#reviews">Reviews</a>
-              </li>
+        <!-- navbar to appear on scroll -->
+        <div id="scroll-nav-bar">   
+             <ul>
+                <li><a href="#jumbotron">Home</a></li>
+                        
+                <li><a href="#aboutSection">About</a></li>
+                        
+                <li><a href="#info">Price</a></li>
+           
+                <li><a href="#services">Services</a></li>
+           
+                <li><a href="#info">Find us!</a></li>
+            
+                <li><a href="#test">Reviews</a></li>
             </ul>
-          </div>
-        </nav>
+        </div>
         
-
-      
+           <div id="navbar">
+            <ul>
+                <li><a href="#jumbotron">Home</a></li>
+                        
+                <li><a href="#aboutSection">About</a></li>
+                        
+                <li><a href="#info">Price</a></li>
+           
+                <li><a href="#services">Services</a></li>
+           
+                <li><a href="#info">Find us!</a></li>
+            
+                <li><a href="#test">Reviews</a></li>
+            </ul>     
+        </div>
 
         <div class="row">
             <div id="jumbotron" class="col-sm-12">
                   <div id="jumboText" class="row" col-sm-4>
                       <h1>RD Mathias & CoAccountants<br>
-              | Business Advisors |</h1>
+                          | Business Advisors |</h1>
                   </div>
                 </div>
         </div>
+        
+        <!-- mobilephone nav bar -->
+              <div id="mobileNav">
+            <ul>
+                <li><a href="#jumbotron">Home</a></li>
+                        
+                <li><a href="#aboutSection">About</a></li>
+                        
+                <li><a href="#info">Price</a></li>
+           
+                <li><a href="#services">Services</a></li>
+           
+                <li><a href="#map">Find us!</a></li>
+            
+                <li><a href="#test">Reviews</a></li>
+            </ul>                   
+            </div>
+                 
+                 
+          <div id="sidebar-btn">
+            <img src="images/menu2.png">
+          </div>
+
+          <div style="clear: both;"></div> <!-- clear float rules -->
+
+            
+        
+            
+            
+    <div id="container-fluid">
         
         <div id ="aboutSection" class="row">
             <div class="col-sm-4">
@@ -135,12 +171,59 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa, porro ipsa optio quia facere iure reiciendis officiis, provident neque quasi fuga dolores magni dignissimos doloribus! Dolorum voluptates accusamus quis.</p>
             </div>
         </div>
-
-     </div>
+            </div>
+     
           <div class="footer">
               Developed by Jax Morgans &copy 2017
           </div>
-      
+        
+           <!-- JQuery -->
+            
+        <!-- Scrolling nav bar -->
+     
+      <script type="text/javascript">
+           (function ($) {
+             $(document).ready(function(){
+
+               // hide .navbar first
+               $("#scroll-nav-bar").hide();
+
+               // fade in .navbar
+               $(function () {
+                 $(window).scroll(function () {
+                   // set distance user needs to scroll before we fadeIn navbar
+                   if ($(this).scrollTop() > 980) {
+                      $('#scroll-nav-bar').fadeIn("slow");
+                   } else {
+                      $('#scroll-nav-bar').fadeOut("slow");
+                   }
+               });
+
+
+            });
+
+            });
+            }(jQuery));
+      </script>
+             
+      <script type="text/javascript">	
+                
+                $("#mobileNav").hide(); // hide the navbar by default
+                
+                $( "#sidebar-btn" ).click(function() {
+                    
+                        $('#mobileNav').toggle();
+                    
+                    });
+                
+                $("a").click(function() {
+                    
+                    $('#mobileNav').hide();
+                    
+                });
+
+            </script>
+     
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
