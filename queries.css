@@ -170,10 +170,11 @@ and (-webkit-min-device-pixel-ratio: 3) {
       
 }
 
-/* ipads */
-@media only screen 
-and (max-width : 1440px) 
-and (max-height : 2560px) {
+/* Samsung galaxy s7+8 */
+@media only screen
+and (min-device-width: 360px) 
+and (max-device-width: 640px) 
+and (-webkit-min-device-pixel-ratio: 4) {
   
 #container-fluid {
 margin: 0 1%;
