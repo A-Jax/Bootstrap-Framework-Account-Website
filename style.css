@@ -31,7 +31,7 @@ h2 {
 #frmContact {
     
     width: 100%;
-    height: 100%;  
+    height: 106%;  
     border: 0.1px solid #5DADE2;
     position: absolute;
     border-radius: 5px;
@@ -44,9 +44,10 @@ h2 {
 
 #mail-status {
     
-    float: left;
-    width: auto;
-    height: inherit;
+    font-size: 90%;
+  	font-family: Lucida Grande;
+    padding: 5px;
+    text-align: center;
     
 }
 
