@@ -27,7 +27,7 @@
         <!-- navbar to appear on scroll -->
         <div id="scroll-nav-bar">   
              <ul>
-                <li><a href="#top">Home</a></li>
+                <li><a href="#top" id="home">Home</a></li>
                         
                 <li><a href="#aboutSection">About</a></li>
                         
@@ -43,7 +43,7 @@
         
            <div id="navbar">
             <ul>
-                <li><a href="#jumbotron">Home</a></li>
+                <li><a href="#jumbotron" id="home">Home</a></li>
                         
                 <li><a href="#aboutSection">About</a></li>
                         
@@ -53,10 +53,11 @@
            
                 <li><a href="#info">Find us!</a></li>
             
-                <li><a href="#test">Reviews</a></li>
+                <li><a href="#test" id="reviews">Reviews</a></li>
             </ul>     
         </div>
         
+  
         <div id="social">
             <a href="https://en-gb.facebook.com/"><img src="images/facebook.png"></a>
             <a href="https://twitter.com/"><img src="images/twitter.png"></a>
@@ -210,6 +211,23 @@
         
            <!-- JQuery -->
            
+           <script>
+            
+            $("a").click(function(){ // click event on links
+            
+            var target = $(this.hash); // store link id location (this hash)
+            
+            $("html, body").animate({ // html and body to cover all browsers
+                scrollTop: $(target).offset().top // scroll from top, to target location (offset)
+            }, 700); // milisecond timer
+            
+            return false; // return false. no info to be used.
+            
+        });
+      
+             
+        </script>
+           
            <script type="text/javascript">
       
                 $("#back-btn").click(function() {
@@ -237,30 +255,29 @@
        </script>
             
         <!-- Scrolling nav bar -->
+        
+        
+        <script>
+        
+                $("#scroll-nav-bar").hide();
+            
+               
+    
+                        $(window).scroll(function () { // function based off scroll location
+                            
+                            if ($(this).scrollTop() > 750) { // if location is greater than 750 px from top.
+                                $('#scroll-nav-bar').fadeIn("slow");
+                            } else {
+                                $('#scroll-nav-bar').fadeOut("slow");
+                            }
+ 
+                        });
+
+              
+   
+        </script>
      
-      <script type="text/javascript">
-          
-          $("#scroll-nav-bar").hide();
-          
-           (function ($) {
-             $(document).ready(function(){           
-
-               // fade in .navbar
-               $(function () {
-                 $(window).scroll(function () {
-                   // set distance user needs to scroll before we fadeIn navbar
-                   if ($(this).scrollTop() > 750) {
-                      $('#scroll-nav-bar').fadeIn("slow");
-                   } else {
-                      $('#scroll-nav-bar').fadeOut("slow");
-                   }
-               });
-            });
-
-            });
-            }(jQuery));
-          
-      </script>
+      
              
       <script type="text/javascript">	
                 
@@ -268,7 +285,7 @@
                 
                 $( "#sidebar-btn" ).click(function() {
                     
-                        $('#mobileNav').toggle();
+                        $('#mobileNav').slideToggle(150);
                     
                     });
                 
